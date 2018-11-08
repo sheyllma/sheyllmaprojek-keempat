@@ -2,41 +2,32 @@ import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 
 import { AppComponent } from './app.component';
-import { HeaderComponent } from './header/header.component';
-import { RecipeComponent } from './recipe/recipe.component';
-import { ShoppingListComponent } from './shopping-list/shopping-list.component';
-
-import{RecipeListComponent}from "./recipe/recipe-list/recipe-list.component";
-import{RecipeDetailComponent}from "./recipe/recipe-detail/recipe-detail.component";
-
-import{RecipeItemComponent}from "./recipe/recipe-list/recipe-item/recipe-item.component";
-
-import { ShoppingEditComponent } from './shopping-list/shopping-edit/shopping-edit.component';
-import { SharedComponent } from './shared/shared.component';
-
-import { DropdownDirective } from './shared/dropdown.directive';
-
-
+import { HeaderNabilaComponent } from './headerNabila/headerNabila.component';
+import { RecipeNabilaComponent } from './recipeNabila/recipeNabila.component';
+import { ShoppingListNabilaComponent } from './shopping-listNabila/shopping-listNabila.component';
+import { RecipeDetailNabilaComponent } from './recipeNabila/recipe-detailNabila/recipe-detailNabila.component';
+import { RecipeListNabilaComponent } from './recipeNabila/recipe-listNabila/recipe-listNabila.component';
+import { RecipeItemNabilaComponent } from './recipeNabila/recipe-listNabila/recipe-itemNabila/recipe-itemNabila.component';
+import { ShoppingEditNabilaComponent } from './shopping-listNabila/shopping-editNabila/shopping-editNabila.component';
+import { DropdownNabilaDirective } from './sharedNabila/dropdownNabila.directive';
+import { ShoppingListNabilaService } from './shopping-listNabila/shopping-listNabila.Service';
 
 @NgModule({
-   declarations: [
-      AppComponent,
-      HeaderComponent,
-      RecipeComponent,
-      ShoppingListComponent,
-      RecipeListComponent,
-      RecipeDetailComponent,
-      RecipeItemComponent,
-      ShoppingEditComponent,
-      SharedComponent,
-      DropdownDirective
-   ],
-   imports: [
-      BrowserModule
-   ],
-   providers: [],
-   bootstrap: [
-      AppComponent
-   ]
+  declarations: [
+    AppComponent,
+    HeaderNabilaComponent,
+    RecipeNabilaComponent,
+    ShoppingListNabilaComponent,
+    RecipeListNabilaComponent,
+    RecipeDetailNabilaComponent,
+    RecipeItemNabilaComponent,
+    ShoppingEditNabilaComponent,
+    DropdownNabilaDirective
+],
+  imports: [
+    BrowserModule
+  ],
+  providers: [ShoppingListNabilaService],
+  bootstrap: [AppComponent]
 })
 export class AppModule { }
